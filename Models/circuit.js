@@ -1,0 +1,36 @@
+const mongoose= require('mongoose')
+const CircuitSchema=new mongoose.Schema({
+nom:{
+    type:String
+},
+description:{
+    type:String
+},
+destinationDepart:{
+type:String
+},
+destinationArrivee:{
+    type:String
+},
+dateDepart:{
+    type:Date
+},
+dateArrivee:{
+    type:Date
+},
+nbrAdult:{
+    type:Number
+},
+chaufeur:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"chauffeur"
+},
+image:{
+type:[String]
+},
+bus:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"bus"
+},
+})
+module.exports=mongoose.model("circuit",CircuitSchema)

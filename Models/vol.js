@@ -1,0 +1,31 @@
+const mongoose= require('mongoose')
+const VolSchema=new mongoose.Schema({
+nom:{
+    type:String
+},
+aereportDepart:{
+type:String
+},
+image:{
+    type:[String]
+},
+aereportArriver:{
+    type:String
+},
+dateDepart:{
+    type:Date
+},
+dateArrivee:{
+    type:Date
+},
+nbrAdult:{
+    type:Number
+},
+nbrEnfant:{
+    type:Number
+},
+nbrBebe:{
+    type:Number
+}
+})
+module.exports=mongoose.model("vol",VolSchema)
